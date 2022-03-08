@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hero__container {
+    background: linear-gradient(to right, black 50%, white 50%);
+    height: 100vh;
+}
+
+.hero__section {
+    background-image: url(images/desktop/image-hero@2x.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 11.5%;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 6rem;
+    text-transform: uppercase;
+    line-height: .9;
+    mix-blend-mode: difference;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.hero__content {
+    width: 22rem;
+    margin-top: 1.5rem;
+}
+
+.hero__content p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.375rem;
+    line-height: 1.5;
+}
+
+.location__link {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.location__link p{
+    margin-top: 0;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.right__arrow {
+    background: hsl(25, 56%, 62%);
+    padding: 1.4rem;
+    left: 10rem;
+}
+
+.section__container {
+    padding: 11%;
+    display: grid;
+    grid-template-columns: 1fr .5fr .5fr .5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "one one . two two two"
+    "three three three three four four"
+    "three three three three five five";
+    gap: 1.875rem;
+    align-items: stretch;
+}
+
+.box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.item__1 {
+    margin-top: 2rem;
+    grid-area: one;
+}
+
+.item__1 h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3.75rem;
+    line-height: .9;
+}
+
+.item__1 p {
+    font-size: 1.375rem;
+    line-height: 1.5;
+    margin-top: 2rem;
+}
+
+.item__2 {
+    grid-area: two;
+}
+
+.item__3 {
+    grid-area: three;
+}
+
+.item__4 {
+    grid-area: four;
+}
+
+.item__5 {
+    background: black;
+    padding: 4rem 3rem;
+    grid-area: five;
+    height: 100%;
+    width: 100%;
+}
+
+.item__5 h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: white;
+    font-weight: 900;
+    font-size: 3.75rem;
+    line-height: .9;
+    text-transform: uppercase;
+}
+
+.item__5 p {
+    color: white;
+    margin-top: 2rem;
+    line-height: 1.5;
+    font-size: 1.375rem;
+}
+
+footer {
+    background-color: black;
+}
+
+.footer__container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 11%;
+}
+
+.footer__container h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2rem;
+}
+
+.footer__container p {
+    width: 26.8rem;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+.socials img {
+    padding: 0 .5rem;
+}
