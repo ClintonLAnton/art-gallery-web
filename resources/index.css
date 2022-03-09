@@ -14,12 +14,12 @@ body {
     margin: 0 auto;
 }
 
-.hero__container {
+.hero {
     background: linear-gradient(to right, black 50%, white 50%);
     height: 100vh;
 }
 
-.hero__section {
+.hero .container {
     background-image: url(images/desktop/image-hero@2x.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -28,6 +28,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 11.5%;
+    position: relative;
 }
 
 h1 {
@@ -40,33 +41,33 @@ h1 {
     margin-top: 1.5rem;
 }
 
-.hero__content {
+.hero .content {
     width: 22rem;
     margin-top: 1.5rem;
 }
 
-.hero__content p {
+.hero .content p {
     font-family: 'Outfit', sans-serif;
     font-size: 1.375rem;
     line-height: 1.5;
 }
 
-.location__link {
+.hero .link {
     margin-top: 3rem;
-    position: relative;
+    position: absolute;
 }
 
-.location__link:hover .text {
+.hero .link:hover .text {
     background-color: hsl(25, 56%, 62%);
     transition: .3s;
 }
 
-.location__link:hover img {
+.hero .link:hover img {
     background-color: black;
     transition: .3s;
 }
 
-.location__link .text{
+.hero .link .text{
     position: absolute;
     padding: 1.5rem 2.15rem;
     color: white;
@@ -76,20 +77,19 @@ h1 {
     font-family: 'Big Shoulders Display', sans-serif;
     font-weight: 600;
     text-align: center;
-    cursor: pointer;
     text-decoration: none;
     letter-spacing: .187rem;
+    width: 12.5rem;
 }
 
-.right__arrow {
+.hero .right__arrow {
     background: hsl(25, 56%, 62%);
     padding: 1.5rem;
-    cursor: pointer;
     position: absolute;
-    right: 108px;
+    right: -16.1rem;
 }
 
-.section__container {
+.section__1 .container {
     padding: 11.5%;
     display: grid;
     grid-template-columns: 1fr .5fr .5fr .5fr 1fr 1fr;
@@ -102,7 +102,7 @@ h1 {
     align-items: stretch;
 }
 
-.box img {
+.section__1 .box img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -163,34 +163,35 @@ h1 {
     font-size: 1.375rem;
 }
 
-footer {
+.index {
     background-color: black;
 }
 
-.footer__container {
+.index .container {
     color: white;
     display: flex;
     justify-content: space-between;
     padding: 5rem 11.5%;
 }
 
-.footer__container h2 {
+.index .container h2 {
     font-family: 'Big Shoulders Display', sans-serif;
     font-size: 2rem;
+    text-transform: uppercase;
 }
 
-.footer__container p {
+.index .container p {
     width: 26.8rem;
     font-size: 1.125rem;
     line-height: 2;
 }
 
-.socials a {
-    padding: 0 .5rem;
+.index .socials a {
+    margin: 0 .5rem;
     cursor: pointer;
 }
 
-.icons:hover {
+.index .icons:hover {
     fill: hsl(25, 56%, 62%);
     transition: .3s;
 }
@@ -202,7 +203,7 @@ footer {
     position: relative;
 }
 
-.back__home {
+.map .links {
     position: absolute;
     margin-left: 11.5%;
 }
@@ -214,17 +215,17 @@ footer {
 
 }
 
-.back__home:hover .text {
+.map .links:hover .text {
     background-color: hsl(25, 56%, 62%);
     transition: .3s;
 }
 
-.back__home:hover img {
+.map .links:hover img {
     background-color: black;
     transition: .3s;
 }
 
-.back__home .text {
+.map .links .text {
     position: absolute;
     background-color: black;
     text-decoration: none;
@@ -235,7 +236,7 @@ footer {
     font-size: 1.25rem;
     padding: 1.5rem;
     text-align: center;
-    left: 58px;
+    left: 3.625rem;
     letter-spacing: .187rem;
 }
 
@@ -278,22 +279,51 @@ footer {
     text-transform: uppercase;
 }
 
-.location__footer {
+.location {
     background-color: hsl(25, 56%, 62%);
-    color: black;
 }
 
-.location__footer .socials .icons {
+.location .container {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 11.5%;
+}
+
+.location .container p {
+    width: 26.8rem;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+.location .socials a {
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.location .socials .icons {
     fill: black;
 }
 
-.location__footer .socials .icons:hover {
+.location .socials .icons:hover {
     fill: white;
     transition: .3s;
 }
 
-.location__footer h2 {
+.location h2 {
+    font-size: 2rem;
     text-transform: uppercase;
     line-height: .9;
     font-weight: 900;
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1025px) and (min-width: 769px) {
+    .hero__container {
+        background-image: url(images/desktop/image-hero.jpg);
+    }
+
+
 }
