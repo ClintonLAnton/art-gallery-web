@@ -11,184 +11,133 @@
 body {
     height: 100vh;
     max-width: 1440px;
+    min-width: 320px;
     margin: 0 auto;
 }
 
 .hero {
-    background: linear-gradient(to right, black 50%, white 50%);
-    height: 100vh;
-}
-
-.hero .container {
-    background-image: url(images/desktop/image-hero@2x.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 11.5%;
+  /*  background: linear-gradient(to right, black 50%, white 50%);*/
     position: relative;
 }
 
-h1 {
+.hero .image {
+    width: 100%;
+}
+
+.hero .container {
+    padding: 0 4.5%;
+}
+
+.container h1 {
     font-family: 'Big Shoulders Display', sans-serif;
-    font-size: 6rem;
-    text-transform: uppercase;
+    font-size: 3.75rem;
     line-height: .9;
-    mix-blend-mode: difference;
-    color: white;
-    margin-top: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
 }
 
 .hero .content {
-    width: 22rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 .hero .content p {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.375rem;
-    line-height: 1.5;
+    font-size: 1.125rem;
+    line-height: 1.7;
 }
 
-.hero .link {
-    margin-top: 3rem;
-    position: absolute;
+.links {
+    display: flex;
+    margin-top: 2rem;
+    width: 16.25rem;
 }
 
-.hero .link:hover .text {
+.hero .links a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.links .text {
+    font-family: 'Big Shoulders Display', sans-serif;
+    width: 12.75rem;
+    height: 4.5rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .2rem;
+}
+
+.arrow {
+    padding: 1.5rem;
+    background-color: hsl(25, 56%, 62%);
+}
+
+.hero .links:hover .text {
     background-color: hsl(25, 56%, 62%);
     transition: .3s;
 }
 
-.hero .link:hover img {
+.hero .links:hover img {
     background-color: black;
     transition: .3s;
 }
 
-.hero .link .text{
-    position: absolute;
-    padding: 1.5rem 2.15rem;
-    color: white;
-    background-color: black;
-    text-transform: uppercase;
-    font-size: 1.25rem;
-    font-family: 'Big Shoulders Display', sans-serif;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: .187rem;
-    width: 12.5rem;
-}
-
-.hero .right__arrow {
-    background: hsl(25, 56%, 62%);
-    padding: 1.5rem;
-    position: absolute;
-    right: -16.1rem;
-}
-
-.section__1 .container {
-    padding: 11.5%;
+.grid .container {
+    margin-top: 7.5rem;
+    padding: 0 4.5%;
     display: grid;
-    grid-template-columns: 1fr .5fr .5fr .5fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "one one . two two two"
-    "three three three three four four"
-    "three three three three five five";
-    gap: 1.875rem;
-    align-items: stretch;
+    grid-template-columns: 1fr;
+    row-gap: 1.5625rem;
 }
 
-.section__1 .box img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.item__1 {
-    margin-top: 2rem;
-    grid-area: one;
-}
-
-.item__1 h2 {
-    font-family: 'Big Shoulders Display', sans-serif;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 3.75rem;
-    line-height: .9;
-}
-
-.item__1 p {
-    font-size: 1.375rem;
-    line-height: 1.5;
-    margin-top: 2rem;
-}
-
-.item__2 {
-    grid-area: two;
-}
-
-.item__3 {
-    grid-area: three;
-}
-
-.item__4 {
-    grid-area: four;
-}
-
-.item__5 {
-    background: black;
-    padding: 4rem 3rem;
-    grid-area: five;
-    height: 100%;
+.box img, .box {
     width: 100%;
 }
 
-.item__5 h2 {
+.box__2 h2, .box__5 h2 {
     font-family: 'Big Shoulders Display', sans-serif;
-    color: white;
     font-weight: 900;
-    font-size: 3.75rem;
+    font-size: 3.125rem;
+    text-transform: uppercase;
     line-height: .9;
-    text-transform: uppercase;
 }
 
-.item__5 p {
-    color: white;
-    margin-top: 2rem;
-    line-height: 1.5;
-    font-size: 1.375rem;
-}
-
-.index {
-    background-color: black;
-}
-
-.index .container {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 5rem 11.5%;
-}
-
-.index .container h2 {
-    font-family: 'Big Shoulders Display', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-.index .container p {
-    width: 26.8rem;
+.box__2 p, .box__5 p {
+    margin-top: 1.5rem;
     font-size: 1.125rem;
-    line-height: 2;
+    line-height: 1.7;
 }
 
-.index .socials a {
-    margin: 0 .5rem;
-    cursor: pointer;
+.box__5 {
+    color: white;
+    background-color: black;
+    padding: 13.5% 7%;
+}
+
+footer {
+    margin-top: 7.5rem;
+    background-color: black;
+    color: white;
+    padding: 12.8% 8.5%;
+}
+
+footer h2 {
+    font-family: 'Big Shoulders Display', sans-serif;
+    line-height: .9;
+    text-transform: uppercase;
+}
+
+footer p {
+    line-height: 1.7;
+    margin-top: 2.375rem;
+}
+
+footer .socials {
+    margin-top: 2.375rem;
 }
 
 .index .icons:hover {
@@ -196,134 +145,83 @@ h1 {
     transition: .3s;
 }
 
-/* location page */
+.socials .instagram {
+    margin: 0 1.25rem;
+}
+
+/* location css */
 
 .map {
-    height: 75vh;
     position: relative;
+    margin-bottom: -.25rem;
+}
+
+.map image {
+    width: 100%;
+}
+
+.map .links a {
+    text-decoration: none;
+    color: white;
 }
 
 .map .links {
     position: absolute;
-    margin-left: 11.5%;
+    top: 0;
+    margin: 0;
 }
 
-.left__arrow {
-    position: absolute;
-    background-color: hsl(25, 56%, 62%);
-    padding: 1.5rem;
+.map .links .left__arrow {
+    background-color: black;
+}
 
+.map .links .text {
+    background-color: hsl(25, 56%, 62%);
 }
 
 .map .links:hover .text {
-    background-color: hsl(25, 56%, 62%);
+    background-color: black;
     transition: .3s;
 }
 
 .map .links:hover img {
-    background-color: black;
+    background-color: hsl(25, 56%, 62%);
     transition: .3s;
-}
-
-.map .links .text {
-    position: absolute;
-    background-color: black;
-    text-decoration: none;
-    width: 12.5rem;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Big Shoulders Display', sans-serif;
-    font-size: 1.25rem;
-    padding: 1.5rem;
-    text-align: center;
-    left: 3.625rem;
-    letter-spacing: .187rem;
-}
-
-.map__location {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
 }
 
 .address {
-    background: black;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    padding: 11.5%;
+    background-color: black;
+    padding: 13% 4.5% 15% 4.5%; 
 }
 
 .address h1 {
-    font-size: 4.375rem; 
-    margin-top: 0;
-    width: 50%;
-    line-height: 1;
-}
-
-.address .text {
-    width: 50%;
-}
-
-.address p {
-    font-size: 1.375rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: white;
+    font-size: 3.125rem;
+    text-transform: uppercase;
 }
 
 .address h2 {
-    color: hsl(25, 56%, 62%);
     font-family: 'Big Shoulders Display', sans-serif;
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
+    color: hsl(25, 56%, 62%);
     text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.address p {
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-top: 1.25rem;
 }
 
 .location {
+    margin-top: 0;
     background-color: hsl(25, 56%, 62%);
-}
-
-.location .container {
     color: black;
-    display: flex;
-    justify-content: space-between;
-    padding: 5rem 11.5%;
 }
 
-.location .container p {
-    width: 26.8rem;
-    font-size: 1.125rem;
-    line-height: 2;
-}
-
-.location .socials a {
-    margin: 0 .5rem;
-    cursor: pointer;
-}
-
-.location .socials .icons {
-    fill: black;
-}
-
-.location .socials .icons:hover {
-    fill: white;
+.location .icons:hover {
+    fill: hsl(0, 0%, 100%);
     transition: .3s;
-}
-
-.location h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    line-height: .9;
-    font-weight: 900;
-    font-family: 'Big Shoulders Display', sans-serif;
-}
-
-/* media queries */
-
-@media only screen and (max-width: 1025px) and (min-width: 769px) {
-    .hero__container {
-        background-image: url(images/desktop/image-hero.jpg);
-    }
-
-
 }
