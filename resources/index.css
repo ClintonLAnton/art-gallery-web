@@ -340,7 +340,7 @@ picture img{
     }
 
     .grid .container {
-        padding: 0 11%;
+        padding: 0 5%;
         gap: 2rem;
     }
     
@@ -398,7 +398,7 @@ picture img{
     }
 
     footer {
-        padding: 8% 11%;
+        padding: 8% 5%;
     }
 
     footer p {
@@ -453,4 +453,12 @@ picture img{
         font-size: 1.375;
         max-width: 18rem;
     } 
+
+    .grid .container {
+        padding: 0 11%;
+    }
+
+    footer {
+        padding: 8% 11%;
+    }
 }
