@@ -11,7 +11,7 @@
 body {
     height: 100vh;
     max-width: 1440px;
-    min-width: 320px;
+    min-width: 375px;
     margin: 0 auto;
 }
 
@@ -91,11 +91,12 @@ body {
     padding: 0 4.5%;
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 1.5625rem;
+    gap: 1.5625rem;
 }
 
 .box img, .box {
     width: 100%;
+    height: 100%;
 }
 
 .box__2 h2, .box__5 h2 {
@@ -153,10 +154,10 @@ footer .socials {
 
 .map {
     position: relative;
-    margin-bottom: -.25rem;
 }
 
-.map image {
+picture img{
+    display: block;
     width: 100%;
 }
 
@@ -171,21 +172,13 @@ footer .socials {
     margin: 0;
 }
 
-.map .links .left__arrow {
-    background-color: black;
-}
-
-.map .links .text {
-    background-color: hsl(25, 56%, 62%);
-}
-
 .map .links:hover .text {
-    background-color: black;
+    background-color: hsl(25, 56%, 62%);
     transition: .3s;
 }
 
 .map .links:hover img {
-    background-color: hsl(25, 56%, 62%);
+    background-color: black;
     transition: .3s;
 }
 
@@ -224,4 +217,240 @@ footer .socials {
 .location .icons:hover {
     fill: hsl(0, 0%, 100%);
     transition: .3s;
+}
+
+@media only screen and (min-width: 426px) {
+    
+    /*index*/ 
+    @media only screen and (min-width: 426px) and (max-width: 599px) {
+        .hero picture .image {
+            object-fit: cover;
+            height: 30rem;
+            position: bottom;
+        }
+    }
+    
+
+    @media only screen and (min-width: 600px) {
+        .hero {
+            display: flex;
+        }
+
+        .hero picture img {
+            min-height: 100vh;
+            min-width: 100%;
+        }
+
+        .hero .container {
+            padding: 20% 5% 20% 0;
+            width: 100%;
+            margin-left: -5%;
+        }
+
+        .hero h1 {
+            font-size: 4.375;
+            margin-top: 0;
+        }
+
+        .hero .content p {
+            margin: 15% 0;
+        }
+    
+   
+        .grid .container {
+            grid-template-columns: 1fr .25fr .40fr .25fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "one . two two two"
+            "three three three four four"
+            "three three three five five";
+            gap: .68rem;
+        }
+
+        .box__2 h2 {
+            margin-top: 2rem;
+        }
+
+        .box__1 {
+            grid-area: two;
+        }
+
+        .box__2 {
+            grid-area: one;
+        }
+
+        .box__3 {
+            grid-area: three
+        }
+
+        .box__4 {
+            grid-area: four;
+        }
+
+        .box__5 {
+            grid-area: five;
+            padding: 31% 10%;
+        }   
+    }
+    /*location*/
+
+
+    .map .links {
+        margin-left: 5%;
+    }
+        
+    .address {
+        display: flex;
+        padding: 11.5% 5%;
+    }
+    
+    .address .text {
+     margin-left: 15%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 7.5% 5%;
+    }
+
+    footer p, footer .socials {
+        margin-top: 0;
+    }
+
+    footer .socials {
+        display: flex;
+        justify-content: flex-end;
+        width: 40%;
+    }
+
+    footer p {
+        width: 50%;
+    }
+
+    footer h2 {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    
+    .hero picture .image {
+        width: 500px;
+    }
+
+    .grid .container {
+        padding: 0 11%;
+        gap: 2rem;
+    }
+    
+    .box__2 h2 {
+        margin-top: 20%;
+        font-size: 3.75rem;
+    }
+
+    .box__2 h2 br {
+        display: none;
+    }
+
+    .box__2 p {
+        font-size: 1.375rem;
+        margin-top: 2rem;
+    }
+
+    .box__5 {
+        padding: 14% 10%;
+    }
+
+    .box__5 h2 {
+        font-size: 3.75rem;
+    }
+
+    .box__5 p {
+        font-size: 1.375rem;
+    }
+
+
+    /* location */
+    .map .links {
+        margin-left: 11%;
+    }
+
+    .address {
+        padding: 11.5% 11%;
+    }
+
+    .address h1 {
+        font-size: 4.375rem;
+    }
+
+    .address .text {
+        margin-left: 30%;
+       
+    }
+
+    .address h2 {
+        font-size: 2.25rem;
+    }
+
+    .address p {
+        font-size: 1.375rem;
+    }
+
+    footer {
+        padding: 8% 11%;
+    }
+
+    footer p {
+        font-size: 1.125rem;
+    }
+
+    footer h2 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .hero {
+        background: linear-gradient(to right, black 50%, white 50%);
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .hero picture .image {
+        /*height: 50rem; */
+        height: 100vh;
+        min-height: 100%;
+        width: 33.75rem;
+    }
+    
+    .hero .container {
+        position: absolute;
+        margin: 15%;
+        padding: 0 11.5%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero h1 {
+        font-size: 4.375;
+        margin-top: 0;
+        font-size: 6rem;
+        mix-blend-mode: difference;
+        color: white;
+    }
+
+    .hero .content {
+        margin: 0;
+        margin: 0 5% 0 0;
+    }
+
+    .hero .content p {
+        margin: 0 0 15% 0;
+        padding: 0;
+        z-index: 999;
+        font-size: 1.375;
+        max-width: 18rem;
+    } 
 }
